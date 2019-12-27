@@ -21,7 +21,8 @@ development:
   <<: *default
   database: sbs_development
   password: <%= ENV['ROOT_DATABASE_PASSWORD'] %>
-
+  username: root
+  
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -53,4 +54,4 @@ production:
   <<: *default
   database: sbs_production
   username: sbs
-  password: <%= ENV['SBS_DATABASE_PASSWORD'] %>
+  password: Atsu050301

@@ -1,5 +1,9 @@
 current directory: /home/hayashiatsuhiro/sbs/vendor/bundle/gems/mysql2-0.5.3/ext/mysql2
+<<<<<<< HEAD
 /home/hayashiatsuhiro/.rbenv/versions/2.6.5/bin/ruby -I /home/hayashiatsuhiro/.rbenv/versions/2.6.5/lib/ruby/2.6.0 -r ./siteconf20191226-3591-1vgtc3i.rb extconf.rb
+=======
+/home/hayashiatsuhiro/.rbenv/versions/2.6.5/bin/ruby -I /home/hayashiatsuhiro/.rbenv/versions/2.6.5/lib/ruby/2.6.0 -r ./siteconf20191222-6335-e60w7p.rb extconf.rb
+>>>>>>> 8c5f837be954fd80fc539a18bf8d9b67c2def098
 checking for rb_absint_size()... yes
 checking for rb_absint_singlebit_p()... yes
 checking for rb_wait_for_single_fd()... yes
@@ -8,8 +12,16 @@ Using mysql_config at /usr/bin/mysql_config
 -----
 checking for mysql.h... yes
 checking for errmsg.h... yes
+<<<<<<< HEAD
 checking for SSL_MODE_DISABLED in mysql.h... no
 checking for MYSQL_OPT_SSL_ENFORCE in mysql.h... no
+=======
+checking for SSL_MODE_DISABLED in mysql.h... yes
+checking for SSL_MODE_PREFERRED in mysql.h... yes
+checking for SSL_MODE_REQUIRED in mysql.h... yes
+checking for SSL_MODE_VERIFY_CA in mysql.h... yes
+checking for SSL_MODE_VERIFY_IDENTITY in mysql.h... yes
+>>>>>>> 8c5f837be954fd80fc539a18bf8d9b67c2def098
 checking for MYSQL.net.vio in mysql.h... yes
 checking for MYSQL.net.pvio in mysql.h... no
 checking for MYSQL_ENABLE_CLEARTEXT_PLUGIN in mysql.h... yes
@@ -38,4 +50,8 @@ linking shared-object mysql2/mysql2.so
 
 current directory: /home/hayashiatsuhiro/sbs/vendor/bundle/gems/mysql2-0.5.3/ext/mysql2
 make "DESTDIR=" install
+<<<<<<< HEAD
 /usr/bin/install -c -m 0755 mysql2.so ./.gem.20191226-3591-1bd12h0/mysql2
+=======
+/usr/bin/install -c -m 0755 mysql2.so ./.gem.20191222-6335-19dei9v/mysql2
+>>>>>>> 8c5f837be954fd80fc539a18bf8d9b67c2def098

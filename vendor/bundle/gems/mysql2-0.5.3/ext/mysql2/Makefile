@@ -31,8 +31,13 @@ rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
 vendorarchdir = $(vendorlibdir)/$(sitearch)
 vendorlibdir = $(vendordir)/$(ruby_version)
 vendordir = $(rubylibprefix)/vendor_ruby
+<<<<<<< HEAD
 sitearchdir = $(DESTDIR)./.gem.20191226-3591-1bd12h0
 sitelibdir = $(DESTDIR)./.gem.20191226-3591-1bd12h0
+=======
+sitearchdir = $(DESTDIR)./.gem.20191222-6335-19dei9v
+sitelibdir = $(DESTDIR)./.gem.20191222-6335-19dei9v
+>>>>>>> 8c5f837be954fd80fc539a18bf8d9b67c2def098
 sitedir = $(rubylibprefix)/site_ruby
 rubyarchdir = $(rubylibdir)/$(arch)
 rubylibdir = $(rubylibprefix)/$(ruby_version)
@@ -84,10 +89,17 @@ debugflags = -ggdb3
 warnflags = -Wall -Wextra -Wdeclaration-after-statement -Wdeprecated-declarations -Wduplicated-cond -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wrestrict -Wwrite-strings -Wimplicit-fallthrough=0 -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-packed-bitfield-compat -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wsuggest-attribute=format -Wsuggest-attribute=noreturn -Wunused-variable
 cppflags = 
 CCDLFLAGS = -fPIC
+<<<<<<< HEAD
 CFLAGS   = $(CCDLFLAGS) $(cflags) -DNO_SSL_MODE_SUPPORT -Wno-bad-function-cast -Wno-conditional-uninitialized -Wno-covered-switch-default -Wno-declaration-after-statement -Wno-disabled-macro-expansion -Wno-documentation-unknown-command -Wno-missing-field-initializers -Wno-missing-variable-declarations -Wno-padded -Wno-reserved-id-macro -Wno-sign-conversion -Wno-static-in-inline -Wno-switch-enum -Wno-undef -Wno-unreachable-code -Wno-used-but-marked-unused $(ARCH_FLAG)
 INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir) -I/usr/include/mysql
 DEFS     = 
 CPPFLAGS = -DHAVE_RB_ABSINT_SIZE -DHAVE_RB_ABSINT_SINGLEBIT_P -DHAVE_RB_WAIT_FOR_SINGLE_FD -DHAVE_MYSQL_H -DHAVE_ERRMSG_H -DHAVE_MYSQL_NET_VIO -DHAVE_ST_NET_VIO -DHAVE_CONST_MYSQL_ENABLE_CLEARTEXT_PLUGIN -DHAVE_CONST_SERVER_QUERY_NO_GOOD_INDEX_USED -DHAVE_CONST_SERVER_QUERY_NO_INDEX_USED -DHAVE_CONST_SERVER_QUERY_WAS_SLOW -DHAVE_CONST_MYSQL_OPTION_MULTI_STATEMENTS_ON -DHAVE_CONST_MYSQL_OPTION_MULTI_STATEMENTS_OFF -DHAVE_TYPE_MY_BOOL -I/home/hayashiatsuhiro/.rbenv/versions/2.6.5/include  $(DEFS) $(cppflags)
+=======
+CFLAGS   = $(CCDLFLAGS) $(cflags) -DFULL_SSL_MODE_SUPPORT -Wno-bad-function-cast -Wno-conditional-uninitialized -Wno-covered-switch-default -Wno-declaration-after-statement -Wno-disabled-macro-expansion -Wno-documentation-unknown-command -Wno-missing-field-initializers -Wno-missing-variable-declarations -Wno-padded -Wno-reserved-id-macro -Wno-sign-conversion -Wno-static-in-inline -Wno-switch-enum -Wno-undef -Wno-unreachable-code -Wno-used-but-marked-unused $(ARCH_FLAG)
+INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir) -I/usr/include/mysql
+DEFS     = 
+CPPFLAGS = -DHAVE_RB_ABSINT_SIZE -DHAVE_RB_ABSINT_SINGLEBIT_P -DHAVE_RB_WAIT_FOR_SINGLE_FD -DHAVE_MYSQL_H -DHAVE_ERRMSG_H -DHAVE_CONST_SSL_MODE_DISABLED -DHAVE_CONST_SSL_MODE_PREFERRED -DHAVE_CONST_SSL_MODE_REQUIRED -DHAVE_CONST_SSL_MODE_VERIFY_CA -DHAVE_CONST_SSL_MODE_VERIFY_IDENTITY -DHAVE_MYSQL_NET_VIO -DHAVE_ST_NET_VIO -DHAVE_CONST_MYSQL_ENABLE_CLEARTEXT_PLUGIN -DHAVE_CONST_SERVER_QUERY_NO_GOOD_INDEX_USED -DHAVE_CONST_SERVER_QUERY_NO_INDEX_USED -DHAVE_CONST_SERVER_QUERY_WAS_SLOW -DHAVE_CONST_MYSQL_OPTION_MULTI_STATEMENTS_ON -DHAVE_CONST_MYSQL_OPTION_MULTI_STATEMENTS_OFF -DHAVE_TYPE_MY_BOOL -I/home/hayashiatsuhiro/.rbenv/versions/2.6.5/include  $(DEFS) $(cppflags)
+>>>>>>> 8c5f837be954fd80fc539a18bf8d9b67c2def098
 CXXFLAGS = $(CCDLFLAGS) $(cxxflags) $(ARCH_FLAG)
 ldflags  = -L. -L/home/hayashiatsuhiro/.rbenv/versions/2.6.5/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic
 dldflags = -L/home/hayashiatsuhiro/.rbenv/versions/2.6.5/lib  -Wl,--compress-debug-sections=zlib 
@@ -137,7 +149,11 @@ extout =
 extout_prefix = 
 target_prefix = /mysql2
 LOCAL_LIBS = 
+<<<<<<< HEAD
 LIBS =  -L/usr/lib/x86_64-linux-gnu  -lmariadbclient -lpthread -lz -lm -ldl  -lm   -lc
+=======
+LIBS =  -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lpthread -lz -lm -lrt -latomic -lssl -lcrypto -ldl  -lm   -lc
+>>>>>>> 8c5f837be954fd80fc539a18bf8d9b67c2def098
 ORIG_SRCS = client.c infile.c mysql2_ext.c result.c statement.c
 SRCS = $(ORIG_SRCS) 
 OBJS = client.o infile.o mysql2_ext.o result.o statement.o
