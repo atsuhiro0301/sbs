@@ -1,2 +1,32 @@
-<h1>Lists#index</h1>
-<p>Find me in app/views/lists/index.html.erb</p>
+<% provide(:title, "index") %>
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+
+  <body>
+    <div class="container">
+      <nav>
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "お気に入り",   '#' %></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="Configuration">
+      <nav>
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "設定",   '#' %></li>
+        </ul>
+      </nav>
+    </div>
+    
+    <div class="Register">
+      <nav>
+        <ul class="nav navbar-nav navbar-right">
+          <%= link_to "新規登録",   '#' %>
+        </ul>
+      </nav>
+    </div>
+  </body>
+</html> 
