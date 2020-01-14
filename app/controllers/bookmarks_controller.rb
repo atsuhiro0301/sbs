@@ -1,4 +1,4 @@
-class ListsController < ApplicationController
+class BookmarksController < ApplicationController
   def index
   end
 
