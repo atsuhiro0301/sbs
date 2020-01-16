@@ -1,0 +1,26 @@
+<%= form_with(model: bookmark, local: true) do |form| %>
+  
+  <div class="field1">
+    <%= form.label :URL %>
+    <%= form.url_field :url, id: :bookmark_url %>
+  </div>
+
+  <div class="field2">
+    <%= form.label :タイトル %>
+    <%= form.text_field :title, id: :bookmark_title %>
+  </div>
+
+  <div class="field3">
+    <%= form.label :カテゴリー %>
+    <%= form.text_field :category, id: :bookmark_category %>
+  </div>
+
+  <div class="field4">
+    <%= form.label :説明 %>
+    <%= form.text_field :description, id: :bookmark_description %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,2 +1,23 @@
-<h1>Lists#show</h1>
-<p>Find me in app/views/lists/show.html.erb</p>
+<h1>確認</h1>
+<p>
+  <strong>url:</strong>
+  <%= @bookmark.url %>
+</p>
+
+<p>
+  <strong>タイトル:</strong>
+  <%= @bookmark.title %>
+</p>
+
+<p>
+  <strong>カテゴリー:</strong>
+  <%= @bookmark.category %>
+</p>
+
+<p>
+  <strong>説明:</strong>
+  <%= @bookmark.descriprion %>
+</p>
+
+<%= link_to '編集', bookmarks_edit_path %> |
+<%= link_to '戻る', bookmarks_path %>
