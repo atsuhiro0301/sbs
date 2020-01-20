@@ -26,6 +26,16 @@ class BookmarksController < ApplicationController
     end
   end
 
+  def update
+    respond_to do |format|
+      if @bookmark.update(bookmark_params)
+        format.html { redirect_to @bookmark, notice: 'Bookmark was successfully updated.' }
+      else
+        format.html { render :edit }
+      end
+    end
+  end
+
   private
 
     def set_bookmark
