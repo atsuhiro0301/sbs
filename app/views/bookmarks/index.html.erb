@@ -1,32 +1,25 @@
-<% provide(:title, "index") %>
-<!DOCTYPE html>
-<html>
-  <head>
-  </head>
-
-  <body>
-    <div class="container">
-      <nav>
-        <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "お気に入り",   '#' %></li>
-        </ul>
-      </nav>
-    </div>
-
-    <div class="Configuration">
-      <nav>
-        <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "設定",   '#' %></li>
-        </ul>
-      </nav>
-    </div>
+<p id="notice"><%= notice %></p>
+<h1>ブックマーク管理アプリ</h1>
     
-    <div class="Register">
-      <nav>
-        <ul class="nav navbar-nav navbar-right">
-          <%= link_to "新規登録",   '#' %>
-        </ul>
-      </nav>
-    </div>
-  </body>
-</html> 
+<table>
+  <thead>
+    <tr>
+      <th>URL</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bookmarks.each do |bookmark| %>
+      <tr>
+        <td><%= bookmark.url %></td>
+        <td><%= link_to '確認', bookmark %></td>
+        <td><%= link_to '編集', "#" %></td>
+        <td><%= link_to '削除', bookmark, method: :delete, data: { confirm: '削除しますか？' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to '新規登録', new_bookmark_path %>
