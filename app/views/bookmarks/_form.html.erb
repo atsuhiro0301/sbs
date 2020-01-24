@@ -1,0 +1,26 @@
+<%= form_for(bookmark) do |f| %>
+  
+  <div class="field1">
+    <%= f.label :URL %>
+    <%= f.url_field :url, id: :bookmark_url %>
+  </div>
+
+  <div class="field2">
+    <%= f.label :タイトル %>
+    <%= f.text_field :title, id: :bookmark_title %>
+  </div>
+
+  <div class="field3">
+    <%= f.label :カテゴリー %>
+    <%= f.text_field :category, id: :bookmark_category %>
+  </div>
+
+  <div class="field4">
+    <%= f.label :説明 %>
+    <%= f.text_field :description, id: :bookmark_description %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "保存" %>
+  </div>
+<% end %>
